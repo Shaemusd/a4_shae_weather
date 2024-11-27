@@ -4,39 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
+
+
 <body>
+    
     <header>
-        <h1>Weather Dashboard</h1>
+
+        <div>
+            <h1 class="website-title">Weather Finder</h1>
+        </div>
     </header>
     <main>
         <section id="input-section">
             <input type="text" id="city-input" placeholder="Enter City Name">
             <button id="search-btn">Search</button>
+            <button onclick="toggleDarkMode()" id="dark-mode-toggle">Toggle Dark Mode</button>
+
         </section>
         <section id="results">
             <div id="current-weather">
                 <div>
                     <h2 class="weather-title">Current Weather</h2>
                 </div>
-                <div class="weather-info">
-                    <div class="weather-icon-container">
-                        <img src="media/qmark.png" alt="Weather icon" class="weather-icon">
-                    </div>
-                    <div class="weather-details">
-                        <div class="weather-column">
-                            <p><strong>City:</strong> <span class="city">N/A</span></p>
-                            <p><strong>Temperature:</strong> <span class="temperature">N/A</span></p>
-                            <p><strong>Feels Like:</strong> <span class="feels-like">N/A</span></p>
+                <div class="top-card">
+                    <div class="weather-info">
+                        <div class="weather-icon-container">
+                            <img src="media/qmark.png" alt="Weather icon" class="weather-icon">
                         </div>
-                        <div class="weather-column">
-                            <p><strong>Humidity:</strong> <span class="humidity">N/A</span></p>
-                            <p><strong>Weather:</strong> <span class="weather">N/A</span></p>
-                            <p><strong>Sunrise:</strong> <span class="sunrise">N/A</span></p>
-                            <p><strong>Sunset:</strong> <span class="sunset">N/A</span></p>
+                        <div class="weather-details">
+                            <div class="weather-column">
+                                <p><strong>Temperature:</strong> <span class="temperature">N/A</span></p>                                
+                                <p><strong>Humidity:</strong> <span class="humidity">N/A</span></p>
+                                <p><strong>Weather:</strong> <span class="weather">N/A</span></p>
+                                <p><strong>Feels Like:</strong> <span class="feels-like">N/A</span></p>
+                            </div>
+                            <div class="weather-column">
+                                <p><strong>Sunrise:</strong> <span class="sunrise">N/A</span></p>
+                                <p><strong>Sunset:</strong> <span class="sunset">N/A</span></p>
+                                <p><strong>City:</strong> <span class="city">N/A</span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -45,65 +58,65 @@
                 <h2>5-Day Forecast</h2>
                 <div id="forecast-cards">
                     <div class="forecast-card">
-                        <div class="forcast-icon-container">
+                        <div class="forecast-icon-container">
                             <img src="media/qmark.png" alt="Weather icon" class="forecast-icon">
                         </div>
                         <div>
-                            <h3 class="day">Day Two</h3>
+                            <h3 class="day">Day?</h3>
                         </div>
-                        <div>
+                        <div class="forecast-card-text">
                             <p><strong>Temperature:</strong> <span class="temperature">N/A</span></p>
                             <p><strong>Humidity:</strong> <span class="humidity">N/A</span></p>
                             <p><strong>Weather:</strong> <span class="weather">N/A</span></p>
                         </div>
                     </div>
                     <div class="forecast-card">
-                        <div class="forcast-icon-container">
+                        <div class="forecast-icon-container">
                             <img src="media/qmark.png" alt="Weather icon" class="forecast-icon">
                         </div>
                         <div>
-                            <h3 class="day">Day Two</h3>
+                            <h3 class="day">Day?</h3>
                         </div>
-                        <div>
+                        <div class="forecast-card-text">
                             <p><strong>Temperature:</strong> <span class="temperature">N/A</span></p>
                             <p><strong>Humidity:</strong> <span class="humidity">N/A</span></p>
                             <p><strong>Weather:</strong> <span class="weather">N/A</span></p>
                         </div>
                     </div>
                     <div class="forecast-card">
-                        <div class="forcast-icon-container">
+                        <div class="forecast-icon-container">
                             <img src="media/qmark.png" alt="Weather icon" class="forecast-icon">
                         </div>
                         <div>
-                            <h3 class="day">Day Two</h3>
+                            <h3 class="day">Day?</h3>
                         </div>
-                        <div>
+                        <div class="forecast-card-text">
                             <p><strong>Temperature:</strong> <span class="temperature">N/A</span></p>
                             <p><strong>Humidity:</strong> <span class="humidity">N/A</span></p>
                             <p><strong>Weather:</strong> <span class="weather">N/A</span></p>
                         </div>
                     </div>
                     <div class="forecast-card">
-                        <div class="forcast-icon-container">
+                        <div class="forecast-icon-container">
                             <img src="media/qmark.png" alt="Weather icon" class="forecast-icon">
                         </div>
                         <div>
-                            <h3 class="day">Day Two</h3>
+                            <h3 class="day">Day?</h3>
                         </div>
-                        <div>
+                        <div class="forecast-card-text">
                             <p><strong>Temperature:</strong> <span class="temperature">N/A</span></p>
                             <p><strong>Humidity:</strong> <span class="humidity">N/A</span></p>
                             <p><strong>Weather:</strong> <span class="weather">N/A</span></p>
                         </div>
                     </div>
                     <div class="forecast-card">
-                        <div class="forcast-icon-container">
+                        <div class="forecast-icon-container">
                             <img src="media/qmark.png" alt="Weather icon" class="forecast-icon">
                         </div>
                         <div>
-                            <h3 class="day">Day Two</h3>
+                            <h3 class="day">Day?</h3>
                         </div>
-                        <div>
+                        <div class="forecast-card-text">
                             <p><strong>Temperature:</strong> <span class="temperature">N/A</span></p>
                             <p><strong>Humidity:</strong> <span class="humidity">N/A</span></p>
                             <p><strong>Weather:</strong> <span class="weather">N/A</span></p>
@@ -112,11 +125,14 @@
                 </div>
             </div>
         </section>
+
     </main>
     <footer>
         <p>&copy; 2024 Weather Dashboard</p>
     </footer>
     <script src="scripts.js"></script>
+
 </body>
+
 
 </html>

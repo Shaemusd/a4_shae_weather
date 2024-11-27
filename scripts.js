@@ -48,6 +48,14 @@ document.getElementById('search-btn').addEventListener('click', async () => {
     }
 });
 
+
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+}
+
+
+
+
 function updateWeatherDetails(data) {
     const iconCode = data.weather ? data.weather[0].icon : '';
     const iconUrl = iconCode ? `https://openweathermap.org/img/wn/${iconCode}@2x.png` : '';
