@@ -58,14 +58,6 @@ function displayWeather(data) {
     document.getElementById('current-info').innerHTML = info;
 }
 
-// Set initial empty values for weather information
-document.getElementById('current-info').innerHTML = `
-    <p><strong>City:</strong> N/A</p>
-    <p><strong>Temperature:</strong> N/A</p>
-    <p><strong>Humidity:</strong> N/A</p>
-    <p><strong>Weather:</strong> N/A</p>
-`;
-
 function displayForecast(data) {
     const forecastCards = document.getElementById('forecast-cards');
     forecastCards.innerHTML = '';
@@ -86,37 +78,3 @@ function displayForecast(data) {
         forecastCards.appendChild(card);
     });
 }
-
-// Set initial empty values for forecast section
-document.getElementById('forecast-cards').innerHTML = `
-    <div class="forecast-card">
-        <h3>Day One</h3>
-        <p><strong>Temperature:</strong> N/A</p>
-        <p><strong>Humidity:</strong> N/A</p>
-        <p><strong>Weather:</strong> N/A</p>
-    </div>
-    <div class="forecast-card">
-        <h3>Day Two</h3>
-        <p><strong>Temperature:</strong> N/A</p>
-        <p><strong>Humidity:</strong> N/A</p>
-        <p><strong>Weather:</strong> N/A</p>
-    </div>
-    <div class="forecast-card">
-        <h3>Day Three</h3>
-        <p><strong>Temperature:</strong> N/A</p>
-        <p><strong>Humidity:</strong> N/A</p>
-        <p><strong>Weather:</strong> N/A</p>
-    </div>
-    <div class="forecast-card">
-        <h3>Day Four</h3>
-        <p><strong>Temperature:</strong> N/A</p>
-        <p><strong>Humidity:</strong> N/A</p>
-        <p><strong>Weather:</strong> N/A</p>
-    </div>
-    <div class="forecast-card">
-        <h3>Day Five</h3>
-        <p><strong>Temperature:</strong> N/A</p>
-        <p><strong>Humidity:</strong> N/A</p>
-        <p><strong>Weather:</strong> N/A</p>
-    </div>
-`;
