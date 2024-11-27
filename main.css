@@ -27,7 +27,8 @@ h1 {
   background-color: #d1e7dd;
   border-radius: 10px;
   margin: 20px auto;
-  max-width: 400px;
+  max-width: 600px;
+  width: 90%;
 }
 
 #city-input {
@@ -55,7 +56,8 @@ h1 {
 }
 
 #results {
-  max-width: 400px;
+  max-width: 600px;
+  width: 90%;
   margin: 20px auto;
   padding: 15px;
 }
@@ -75,6 +77,25 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#forecast-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.forecast-card {
+  flex: 1;
+  min-width: 150px;
+  max-width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 10px;
+}
+
 h2 {
   font-size: 1.25rem;
   color: #2c3e50;
@@ -85,21 +106,6 @@ h2 {
   padding: 10px;
 }
 
-#forecast-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.forecast-card {
-  background-color: #ffffff;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
 footer {
   text-align: center;
   padding: 20px;
@@ -108,4 +114,10 @@ footer {
   margin-top: 20px;
   font-size: 0.9rem;
   color: #777;
+}
+
+@media (max-width: 400px) {
+  .forecast {
+      justify-content: center;
+  }
 }
