@@ -48,13 +48,13 @@ document.getElementById('search-btn').addEventListener('click', async () => {
     }
 });
 
-
+/// Dark Mode Function
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
 }
 
 
-
+///MORE weather stats
 
 function updateWeatherDetails(data) {
     const iconCode = data.weather ? data.weather[0].icon : '';
