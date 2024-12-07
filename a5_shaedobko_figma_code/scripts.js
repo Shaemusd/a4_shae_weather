@@ -203,8 +203,8 @@ function App() {
             <h1>Todo List</h1>
             <TodoList todos={[
                 { id: 1, text: "Complete React assignment", completed: false },
-                { id: 2, text: "Study for math test", completed: true },
-                { id: 3, text: "Do laundry", completed: false }
+                { id: 2, text: "Finsh My Game In React", completed: false },
+                { id: 3, text: "Cry", completed: true }
             ]} />
         </div>
 
