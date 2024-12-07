@@ -63,27 +63,27 @@ function Footer(props) {
 function Card(props) {
     return (
         <div className="card">
-            <img src={props.image} alt={props.subtitle} />
+            <img src={props.image} alt={props.subtitle} style={{ maxWidth: "100px", maxHeight: "100px" }}/>
             <h2>{props.title}</h2>
             <h3>{props.subtitle}</h3>
             <p>{props.content}</p>
         </div>
     );
 }
-function App() {
-    return (
-        <div>
-            <Header title="Welcome to My Website!" message="Thanks for visiting my site." />
-            <Card
-                title="My Card Title"
-                subtitle="My Card Subtitle"
-                image="media/overpriced.png"
-                content="This is the content of my card."
-            />
-            <Footer message="Contact me at contact@mywebsite.com" />
-        </div>
-    );
-}
+// function App() {
+//     return (
+//         <div>
+//             <Header title="Welcome to My Website!" message="Thanks for visiting my site." />
+//             <Card
+//                 title="My Card Title"
+//                 subtitle="My Card Subtitle"
+//                 image="media/overpriced.png"
+//                 content="This is the content of my card."
+//             />
+//             <Footer message="Contact me at contact@mywebsite.com" />
+//         </div>
+//     );
+// }
 
 
 
@@ -192,6 +192,14 @@ const TodoList = (props) => {
 function App() {
     return (
         <div>
+            <Header title="Welcome to My Website!" message="Thanks for visiting my site." />
+            <Card
+                title="My Card Title"
+                subtitle="My Card Subtitle"
+                image="media/overpriced.png"
+                content="This is the content of my card."
+            />
+            <Footer message="Contact me at contact@mywebsite.com" />
             <h1>Todo List</h1>
             <TodoList todos={[
                 { id: 1, text: "Complete React assignment", completed: false },
@@ -199,6 +207,7 @@ function App() {
                 { id: 3, text: "Do laundry", completed: false }
             ]} />
         </div>
+
     );
 }
 
