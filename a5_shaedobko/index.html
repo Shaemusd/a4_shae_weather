@@ -12,11 +12,27 @@
 </head>
 
 
-    <body>
-        <div id="root"></div>
+<body>
+    <div id="root"></div>
 
-        
-    </body>
+    <script>
+        let heading = React.createElement(
+            "h2",
+            {
+                style: { color: "purple" },
+                className: 'greetisng',
+                id: 'hello'
+            },
+            "Look at us we are using React"
 
-    <script src="scripts.js"></script>
+        );
+        ReactDOM.render(
+            heading,
+            document.getElementById("root")
+        );
+        </script>
+    </body >
+
+            <script src="scripts.js"></script>
+
 </html>
