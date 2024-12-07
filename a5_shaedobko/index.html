@@ -15,22 +15,67 @@
 <body>
     <div id="root"></div>
 
-    <script>
+    <!-- <script>
         let heading = React.createElement(
             "h2",
             {
                 style: { color: "purple" },
-                className: 'greetisng',
+                className: 'greedddtisng',
                 id: 'hello'
             },
             "Look at us we are using React"
+
 
         );
         ReactDOM.render(
             heading,
             document.getElementById("root")
         );
+        </script> -->
+
+
+
+        <script type="text/babel">
+            const App = () => {
+                const todos = [
+                    { id: 1, text: "Complete React assignment", completed: false },
+                    { id: 2, text: "Finish Mike Assignments On Time", completed: false },
+                    { id: 3, text: "Cry In The Shower", completed: true }
+                ];
+        
+                return React.createElement("div", null,
+                    React.createElement(Header, {
+                        title: "Welcome to My Website!",
+                        message: "Thanks for visiting my site."
+                    }),
+                    React.createElement(TodoList, { todos }),
+                    React.createElement(Card, {
+                        title: "My Card Title",
+                        subtitle: "My Card Subtitle",
+                        content: "This is the content of my card.",
+                        image: "https://example.com/my-image.jpg"
+                    }),
+                    React.createElement(Footer, {
+                        message: "Contact me at contact@mywebsite.com"
+                    })
+                );
+            };
+        
+            ReactDOM.render(React.createElement(App), document.getElementById("root"));
         </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
     </body >
 
             <script src="scripts.js"></script>

@@ -1,29 +1,36 @@
-import React from 'react';
-import Header from 'components/header.js';
-import Footer from './footer';
-import TodoList from './TodoList';
-import Card from './Card';
-
-const App = () => {
-    const todos = [
-        { id: 1, text: "Complete React assignment", completed: false },
-        { id: 2, text: "Study for math test", completed: false },
-        { id: 3, text: "Do laundry", completed: true }
-    ];
-
-    return (
-        <div>
-            <Header title="Welcome to My Website!" message="Thanks for visiting my site." />
-            <TodoList todos={todos} />
-            <Card
-                title="My Card Title"
-                subtitle="My Card Subtitle"
-                content="This is the content of my card."
-                image="https://example.com/my-image.jpg"
-            />
-            <Footer message="Contact me at contact@mywebsite.com" />
-        </div>
+const Header = ({ title, message }) =>
+    React.createElement("div", null,
+        React.createElement("h1", null, title),
+        React.createElement("p", null, message)
     );
-};
 
-export default App;
+const Footer = ({ message }) =>
+    React.createElement("div", null,
+        React.createElement("p", null, message || "Copyright © 2023 My Website. All rights reserved.")
+    );
+
+const Card = ({ title, subtitle, content, image }) =>
+    React.createElement("div", { className: "card" },
+        React.createElement("img", { src: image, alt: subtitle, style: { width: "100%" } }),
+        React.createElement("h2", null, title),
+        React.createElement("h3", null, subtitle),
+        React.createElement("p", null, content)
+    );
+
+
+const TodoList = ({ todos }) =>
+    React.createElement("div", null,
+        React.createElement("ul", null,
+            todos.map(todo =>
+                React.createElement("li", {
+                    key: todo.id,
+                    style: { textDecoration: todo.completed ? "line-through" : "none" }
+                },
+                    React.createElement("input", { type: "checkbox", checked: todo.completed }),
+                    " ",
+                    todo.text
+                )
+            )
+        ),
+        React.createElement("button", null, "Remove Completed Items")
+    );
